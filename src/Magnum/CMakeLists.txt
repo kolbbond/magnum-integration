@@ -86,6 +86,10 @@ if(MAGNUM_WITH_IMGUI)
     add_subdirectory(ImGuiIntegration)
 endif()
 
+if(MAGNUM_WITH_IMPLOT)
+    add_subdirectory(ImPlotIntegration)
+endif()
+
 if(MAGNUM_WITH_OVR)
     add_subdirectory(OvrIntegration)
 endif()

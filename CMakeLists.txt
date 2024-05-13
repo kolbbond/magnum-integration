@@ -99,7 +99,8 @@ option(MAGNUM_WITH_BULLET "Build BulletIntegration library" OFF)
 option(MAGNUM_WITH_DART "Build DartIntegration library" OFF)
 option(MAGNUM_WITH_EIGEN "Build EigenIntegration library" OFF)
 option(MAGNUM_WITH_GLM "Build GlmIntegration library" OFF)
-option(MAGNUM_WITH_IMGUI "Build ImGuiIntegration library" OFF)
+option(MAGNUM_WITH_IMGUI "Build ImGuiIntegration library" ON)
+option(MAGNUM_WITH_IMPLOT "Build ImPlotIntegration library" OFF)
 option(MAGNUM_WITH_OVR "Build OvrIntegration library" OFF)
 
 # Library-specific options. This one uses the `SHELL:` option from CMake 3.12
