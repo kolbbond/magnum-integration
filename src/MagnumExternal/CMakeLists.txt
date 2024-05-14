@@ -40,9 +40,11 @@ if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/ImGui)
         DESTINATION ${MAGNUM_EXTERNAL_INCLUDE_INSTALL_DIR}/ImGui)
 endif()
 
+if(MAGNUM_WITH_IMPLOT)
 if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/ImPlot)
     install(FILES
         ImPlot/implot.h
         ImPlot/implot_internal.h
         DESTINATION ${MAGNUM_EXTERNAL_INCLUDE_INSTALL_DIR}/ImPlot)
+endif()
 endif()

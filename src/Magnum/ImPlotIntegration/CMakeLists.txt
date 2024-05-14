@@ -37,15 +37,15 @@ find_package(Magnum REQUIRED GL Shaders)
 # from the outside. The *.cpp files from there will get compiled into this
 # library and the *.h files will be installed alongside Magnum. The
 # FindImPlot.cmake module then will look into include/MagnumExternal/ImPlot as
-# a fallback if IMGUI_DIR is not set and no CMake config file is found.
-if(NOT IMGUI_DIR AND EXISTS ${PROJECT_SOURCE_DIR}/src/MagnumExternal/ImPlot)
-    set(IMGUI_DIR ${PROJECT_SOURCE_DIR}/src/MagnumExternal/ImPlot)
+# a fallback if IMPLOT_DIR is not set and no CMake config file is found.
+if(NOT IMPLOT_DIR AND EXISTS ${PROJECT_SOURCE_DIR}/src/MagnumExternal/ImPlot)
+    set(IMPLOT_DIR ${PROJECT_SOURCE_DIR}/src/MagnumExternal/ImPlot)
 endif()
 
 find_package(ImPlot REQUIRED Sources)
 
 if(MAGNUM_BUILD_STATIC)
-    set(MAGNUM_IMGUIINTEGRATION_BUILD_STATIC 1)
+    set(MAGNUM_IMPLOTINTEGRATION_BUILD_STATIC 1)
 endif()
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/configure.h.cmake
@@ -57,6 +57,7 @@ set(MagnumImPlotIntegration_SRCS
 set(MagnumImPlotIntegration_HEADERS
     Context.h
     Context.hpp
+    Integration.h
 
     visibility.h)
 
