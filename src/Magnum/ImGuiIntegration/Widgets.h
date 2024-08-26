@@ -77,7 +77,8 @@ inline bool imageButton(GL::Texture2D& texture, const Vector2& size,
     const Color4& backgroundColor = {},
     const Color4& tintColor = Color4{1.0f})
 {
-    return ImGui::ImageButton(static_cast<ImTextureID>(&texture), ImVec2(size), ImVec2(uvRange.topLeft()), ImVec2(uvRange.bottomRight()), framePadding, ImColor(backgroundColor), ImColor(tintColor));
+    //return ImGui::ImageButton(static_cast<ImTextureID>(&texture), ImVec2(size), ImVec2(uvRange.topLeft()), ImVec2(uvRange.bottomRight()), framePadding, ImColor(backgroundColor), ImColor(tintColor));
+    return ImGui::ImageButton("",static_cast<ImTextureID>(&texture), ImVec2(size), ImVec2(uvRange.topLeft()), ImVec2(uvRange.bottomRight()), ImColor(backgroundColor), ImColor(tintColor));
 }
 
 }}
